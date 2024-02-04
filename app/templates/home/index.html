@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 
 {% block title %}Home{% endblock %}
+{% block stylesheet %}{{ url_for("static", filename="css/home.css") }}{% endblock %}
 
 {% block content %}
-<h1>Hello, World!</h1>
+<div class="title">Welcome to <span class="gradient-text expandable-text">&lt;me<span class="expandable-text-hidden">lker&nbsp</span>wi<span class="expandable-text-hidden">dén&nbsp</span>.dev/&gt;</span> !</div>
+<div class="links">
+    <a href="https://github.com/memagu" target="_blank">GitHub<img src="{{ url_for('static', filename='images/github.svg') }}"></a>
+    <a href="https://www.linkedin.com/in/memagu/" target="_blank">LinkedIn<img src="{{ url_for('static', filename='images/linkedin.png') }}"></a>
+</div>
 {% endblock %}
