@@ -4,9 +4,21 @@
 {% block stylesheet %}{{ url_for("static", filename="css/home.css") }}{% endblock %}
 
 {% block content %}
-<div class="title">Welcome to <span class="gradient-text expandable-text">&lt;me<span class="expandable-text-hidden">lker&nbsp</span>wi<span class="expandable-text-hidden">dén&nbsp</span>.dev/&gt;</span> !</div>
-<div class="links">
-    <a href="https://github.com/memagu" target="_blank">GitHub<img src="{{ url_for('static', filename='images/github.svg') }}"></a>
-    <a href="https://www.linkedin.com/in/memagu/" target="_blank">LinkedIn<img src="{{ url_for('static', filename='images/linkedin.png') }}"></a>
-</div>
+    <div class="content">
+        <div class="title">
+            <span>Welcome to&nbsp</span>
+            <span class="gradient-text expandable-text">
+                <span>&ltme</span>
+                <span class="expandable-text-hidden">lker&nbsp</span>
+                <span>wi</span>
+                <span class="expandable-text-hidden">dén&nbsp</span>
+                <span>.dev/&gt</span>
+            </span>
+            <span>&nbsp!</span>
+        </div>
+        <div class="links">
+            <a href="https://github.com/memagu" target="_blank">GitHub<img class="inline-icon" src="{{ url_for('static', filename='images/github.svg') }}"></a>
+            <a href="https://www.linkedin.com/in/memagu/" target="_blank">LinkedIn<img class="inline-icon" src="{{ url_for('static', filename='images/linkedin.png') }}"></a>
+        </div>
+    </div>
 {% endblock %}
