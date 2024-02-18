@@ -6,9 +6,9 @@
     align-items: center;
     text-align: center;
     min-height: 65vh;
-    font-size: 2vw;
 }
 
 .title > a {
+    font-size: 2vw;
     text-decoration: underline;
 }
