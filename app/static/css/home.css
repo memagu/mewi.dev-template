@@ -6,7 +6,13 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 70vh;
+    min-height: 65vh;
+}
+
+.gradient-text {
+    background: linear-gradient(30deg, var(--color-mewi-blue), var(--color-mewi-cyan));
+    background-clip: text;
+    color: transparent;
 }
 
 .title {
@@ -14,34 +20,26 @@
     font-size: 5vw;
 }
 
-.gradient-text {
-    text-decoration: none;
-    background: linear-gradient(30deg, var(--color-mewi-blue), var(--color-mewi-cyan));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+.expandable-text {
+    display: inline-flex;
 }
 
-.expandable-text > .expandable-text-hidden{
-    display: inline-block;
-    vertical-align: bottom;
-    overflow: hidden;
-    white-space: nowrap;
-    max-width: 0;
-    transition: max-width 1s ease-in-out;
+.expandable-text > .expandable-text-hidden {
+    visibility: hidden;
+    color: var(--color-background);
+    letter-spacing: -0.5em;
+    transition: visibility 0s 0.1s, color 0.2s linear, letter-spacing 0.25s ease-in-out;
 }
 
 .expandable-text:hover > .expandable-text-hidden {
-    max-width: 100%;
+    visibility: visible;
+    color: inherit;
+    letter-spacing: 0em;
 }
 
 .links > a {
     display: inline-block;
-    padding: 0.5em 1em;
     font-size: 2em;
-}
-
-.links img {
-    height: 1em;
-    padding: 0.25em;
-    vertical-align: bottom;
+    padding: 0.5em;
 }
