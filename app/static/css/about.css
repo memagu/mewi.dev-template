@@ -8,7 +8,10 @@
     min-height: 65vh;
 }
 
-.title > a {
+.title {
     font-size: 2vw;
+}
+
+.title > a {
     text-decoration: underline;
 }
